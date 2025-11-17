@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket Demo</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>SocketDemo</h1>
+        <p>Minimal WebSocket playground</p>
+      </header>
+      <section class="status-panel">
+        <div class="status-row">
+          <p>
+            Status:
+            <span id="status" class="status-indicator" data-state="disconnected">disconnected</span>
+          </p>
+          <button id="reconnect" type="button">Reconnect</button>
+        </div>
+        <div class="status-grid">
+          <div>
+            <p class="label">Client ID</p>
+            <p class="value" id="clientId">—</p>
+          </div>
+          <div>
+            <p class="label">Known clients</p>
+            <p class="value" id="clientCount">0</p>
+          </div>
+          <div>
+            <p class="label">History entries</p>
+            <p class="value" id="historyCount">0</p>
+          </div>
+        </div>
+      </section>
+      <section class="messages-panel">
+        <h2>Messages</h2>
+        <ul id="messages"></ul>
+      </section>
+      <section class="composer-panel">
+        <h2>Send a message</h2>
+        <form id="composer">
+          <input id="messageInput" placeholder="Type something" autocomplete="off" />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
